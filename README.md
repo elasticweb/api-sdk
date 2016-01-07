@@ -1,6 +1,12 @@
 Elasticweb API SDK
 ==============
 
+Install via composer:
+
+```
+composer require elasticweb/api-sdk
+```
+
 Example use API:
 
 ```php
