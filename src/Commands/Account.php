@@ -50,4 +50,16 @@ class Account extends BaseCommand {
     return $this->getClient()->delete('account/entry/' . $node_id);
   }
 
+  /**
+   * @param int $node_id
+   * @param string $tasks
+   *
+   * @return \Elasticweb\Api\BaseObject
+   */
+  public function patchCron($node_id, $tasks = '') {
+    return $this->getClient()->patch('account/cron/' . $node_id, [
+      'json' => ['tasks' => $tasks],
+    ]);
+  }
+
 }
